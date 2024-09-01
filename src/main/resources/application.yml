@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: gateway-service
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    status-page-url-path: ${management.context-path}/info
+    health-check-url-path: ${management.context-path}/health
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: "ALWAYS"
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  context-path: http://localhost:${server.port}/actuator
+
+info:
+  application:
+    name: gateway-service
+    description: Ticketing Application Gateway Service
