@@ -99,6 +99,21 @@
 			<artifactId>micrometer-registry-prometheus</artifactId>
 			<version>${micrometer.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-client</artifactId>
+			<version>${spring-cloud.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+			<version>${spring-cloud.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+			<version>${spring-cloud.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
